@@ -1,0 +1,49 @@
+@import "./iconfont.scss";
+* {
+    box-sizing: border-box;
+}
+$theamColor: #38f;
+.ybox {
+    border-radius: 1vw;
+    width: 94%;
+    margin-left: 3%;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 3vw;
+    // padding-top: 2vw;
+}
+html,
+body {
+    // border: 2px solid red;
+    padding: 0;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+body {
+    // border: 2px solid darkblue;
+}
+::-webkit-input-placeholder {
+} /* 使用webkit内核的浏览器 */
+:-moz-placeholder {
+} /* Firefox版本4-18 */
+::-moz-placeholder {
+} /* Firefox版本19+ */
+:-ms-input-placeholder {
+} /* IE浏览器 */
+
+// 定义选择框的取消和确定按钮的颜色
+.van-picker__cancel,
+.van-picker__confirm {
+    color: $theamColor !important;
+}
+.ymoreTitle1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+}
+input::-webkit-input-placeholder {
+    color: #999;
+    font-size: 4vw;
+}
