@@ -88,7 +88,7 @@ export default {
         { name: "1", id: 28 },
         { name: "2", id: 29 },
         { name: "3", id: 30 },
-        { name: "4", id: 31 },
+        { name: "4", id: 101 },
         { name: "5", id: 32 },
         { name: "6", id: 33 },
         { name: "7", id: 34 },
@@ -263,7 +263,7 @@ export default {
 
       .keyboard {
         // padding-bottom:2vh;
-        padding: 0vw 2.5vw 3vh;
+        padding: 0vw 2.5vw 4vh;
         .header {
           //  border: 1px solid red;
           background-color: #f1f1f3;
@@ -325,7 +325,7 @@ export default {
 
       .keyboardE {
         // padding-bottom: 2vw;
-        padding: 0vw 1vw 3vh;
+        padding: 0vw 1vw 4vh;
         .header {
           //  border: 1px solid red;
           background-color: #f1f1f3;

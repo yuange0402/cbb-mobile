@@ -1,12 +1,28 @@
 <template>
      <div class="getDriveCard">
-         <!-- 播放实行头的画面 -->
-         <video id = "video"></video>
+          <!-- 相框 -->
+          <div class="borderPanelW">
+            <div class="borderPanel">
+                <img src="../../public/img/pgTemplate.png" alt="">
+            </div>
+              <!-- 播放实行头的画面 -->
+            <video id = "video"></video>
 
-         <!-- 里面的模板长宽比例1.37:1 -->
-         <div class="photoBox">
-              
-         </div>
+          </div>
+
+
+          <!-- 中间的图片 -->
+          <div class="driverCardP">
+              <div class="title">将行驶证正页放入框内拍照</div>
+              <img src="../../public/img/pzxsz.png" alt="">
+          </div>
+
+          <!-- 下面的三个按钮 -->
+          <div class="buttonW">
+               <div>11</div>
+               <div>22</div>
+               <div>33</div>
+          </div>
      </div>
 </template>
 <script>
@@ -63,28 +79,74 @@ export default {
     margin: 0;
  }
   .getDriveCard{
-      background-color: #666;
+      background-color:white;
       width:100vw;
-      height: 73vw;
-      #video{
-           border: 1px solid red;
-           width: 100vw;
-        //    height:60vw;
-          height: 73vw;
-          padding: 0;
+    //   height:69vw;
+      height: 100vh;
+    //   border: 2px solid darkblue;
+
+      position: relative;
+       .borderPanelW{
+             width: 100%;
+            //  border: 2px solid darkorange;
+             position: relative;
+             height:73vw;
+            .borderPanel{
+                top: 0;
+                z-index: 99999;
+                position: absolute; 
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            #video{
+                // border: 3px solid darkgreen;
+                width: 100%;
+                height: 100%; 
+                position: absolute;
+                z-index:99;
+                padding: 0;
+                z-index: 1;
+                //   background-color:red;
+            }
+     
+        }
+
+       // 中间的图片
+      .driverCardP{
+          &> .title{
+              margin:7vw 0 2vw;
+          }
+           width: 100%;
+           text-align: center;
+           img{
+
+               width: 65%;
+            //    margin-left: 17.5%;
+               height: auto;
+           }
       }
 
-      .photoBox{
-          border: 1px solid #fff;
-          border-radius:10px;
-          width: 94vw;
-          height:67vw;
-          position: absolute;
-          z-index:9;
-          top:2.8vw;
-          left:3vw;
-           
+      .buttonW{
+           border: 1px solid red;
+           height: 10vh;
+           width: 100vw;
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+           position: absolute;
+           bottom: 0;
+           background-color: #fff;
+
       }
+
+
+       
+
+
+
   }
      
 

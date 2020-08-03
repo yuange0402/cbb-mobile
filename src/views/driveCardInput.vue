@@ -26,6 +26,7 @@
         <van-field
           @focus="focusCarNum"
           input-align="right"
+          @input = "changeToBigWithCarNum"
           v-model="carNum"
           placeholder="车辆识别代码后6位"
         />
@@ -36,7 +37,7 @@
           <span class="van-cell-text">发动机号</span>
           <span class="iconfont icon-icon" @click="$refs.fdj.show = true"></span>
         </template>
-        <van-field @focus="focusCarNum" v-model="fdjNum" placeholder="发动机号后6位" />
+        <van-field @input="changeToBigWithFdjNum" @focus="focusCarNum" v-model="fdjNum" placeholder="发动机号后6位" />
       </van-cell>
     </div>
     <div class="ybox">
@@ -166,11 +167,10 @@ export default {
     return {
       carListActive:1,//车辆列表中选中的车辆
       carType: ["小型车", "紧凑型车", "中型车", "中大型车", "大型车"], //车辆类型
-      carNum: "", //车辆唯一识别代码
-      //  showPicker: false, //
       switchChecked: false, //开关按钮
       dataFrom: "全国一线",
-      fdjNum: "" //发动机号码
+      fdjNum: "", //发动机号码
+      carNum: "", //车辆唯一识别代码
     };
   },
   mounted() {
@@ -199,7 +199,16 @@ export default {
       this.$refs.inputFlag.showE = false;
       // this.show = false;
       // this.showE = false;
+    },
+    changeToBigWithCarNum(value){
+        value = value.toUpperCase();
+        this.carNum = value;
+    },
+    changeToBigWithFdjNum(value){
+        value = value.toUpperCase();
+        this.fdjNum = value;
     }
+
   }
 };
 </script>
